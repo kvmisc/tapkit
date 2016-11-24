@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2957881933865900E29848 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2957871933865900E29848 /* Foundation.framework */; };
+		0A29578C1933865900E29848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A29578B1933865900E29848 /* UIKit.framework */; };
+		0A3BDBB41CC9D3BF007F170E /* TKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3BDBB21CC9D3BF007F170E /* TKViewController.m */; };
+		0A3BDBB51CC9D3BF007F170E /* TKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A3BDBB31CC9D3BF007F170E /* TKViewController.xib */; };
+		0A5F483919812E7200A1DA9A /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F480C19812E7200A1DA9A /* NSArrayAdditions.m */; };
+		0A5F483A19812E7200A1DA9A /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F480E19812E7200A1DA9A /* NSDataAdditions.m */; };
+		0A5F483C19812E7200A1DA9A /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481219812E7200A1DA9A /* NSDictionaryAdditions.m */; };
+		0A5F483D19812E7200A1DA9A /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481419812E7200A1DA9A /* NSObjectAdditions.m */; };
+		0A5F483E19812E7200A1DA9A /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481619812E7200A1DA9A /* NSStringAdditions.m */; };
+		0A5F483F19812E7200A1DA9A /* TKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481919812E7200A1DA9A /* TKCommon.m */; };
+		0A5F484219812E7200A1DA9A /* TKDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F482019812E7200A1DA9A /* TKDiskCache.m */; };
+		0A5F484419812E7200A1DA9A /* TKMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F482519812E7200A1DA9A /* TKMemoryCache.m */; };
+		0A5F484819812E7200A1DA9A /* UIButtonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F482E19812E7200A1DA9A /* UIButtonAdditions.m */; };
+		0A5F484919812E7200A1DA9A /* UILabelAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483019812E7200A1DA9A /* UILabelAdditions.m */; };
+		0A5F484C19812E7200A1DA9A /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483619812E7200A1DA9A /* UIViewAdditions.m */; };
+		0A5F484D19812E7200A1DA9A /* UIViewControllerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483819812E7200A1DA9A /* UIViewControllerAdditions.m */; };
+		2337F60C1981141500C0768E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2337F6051981141500C0768E /* AppDelegate.m */; };
+		2337F60D1981141500C0768E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2337F6061981141500C0768E /* Images.xcassets */; };
+		2337F60F1981141500C0768E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2337F6081981141500C0768E /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A2957841933865900E29848 /* TapKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2957871933865900E29848 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A29578B1933865900E29848 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A3BDBB11CC9D3BF007F170E /* TKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKViewController.h; sourceTree = "<group>"; };
+		0A3BDBB21CC9D3BF007F170E /* TKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKViewController.m; sourceTree = "<group>"; };
+		0A3BDBB31CC9D3BF007F170E /* TKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKViewController.xib; sourceTree = "<group>"; };
+		0A5F480B19812E7200A1DA9A /* NSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayAdditions.h; sourceTree = "<group>"; };
+		0A5F480C19812E7200A1DA9A /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayAdditions.m; sourceTree = "<group>"; };
+		0A5F480D19812E7200A1DA9A /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		0A5F480E19812E7200A1DA9A /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		0A5F481119812E7200A1DA9A /* NSDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryAdditions.h; sourceTree = "<group>"; };
+		0A5F481219812E7200A1DA9A /* NSDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryAdditions.m; sourceTree = "<group>"; };
+		0A5F481319812E7200A1DA9A /* NSObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectAdditions.h; sourceTree = "<group>"; };
+		0A5F481419812E7200A1DA9A /* NSObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectAdditions.m; sourceTree = "<group>"; };
+		0A5F481519812E7200A1DA9A /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		0A5F481619812E7200A1DA9A /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		0A5F481719812E7200A1DA9A /* tapkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tapkit.h; sourceTree = "<group>"; };
+		0A5F481819812E7200A1DA9A /* TKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCommon.h; sourceTree = "<group>"; };
+		0A5F481919812E7200A1DA9A /* TKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCommon.m; sourceTree = "<group>"; };
+		0A5F481F19812E7200A1DA9A /* TKDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDiskCache.h; sourceTree = "<group>"; };
+		0A5F482019812E7200A1DA9A /* TKDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDiskCache.m; sourceTree = "<group>"; };
+		0A5F482319812E7200A1DA9A /* TKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMacro.h; sourceTree = "<group>"; };
+		0A5F482419812E7200A1DA9A /* TKMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMemoryCache.h; sourceTree = "<group>"; };
+		0A5F482519812E7200A1DA9A /* TKMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMemoryCache.m; sourceTree = "<group>"; };
+		0A5F482D19812E7200A1DA9A /* UIButtonAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonAdditions.h; sourceTree = "<group>"; };
+		0A5F482E19812E7200A1DA9A /* UIButtonAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonAdditions.m; sourceTree = "<group>"; };
+		0A5F482F19812E7200A1DA9A /* UILabelAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelAdditions.h; sourceTree = "<group>"; };
+		0A5F483019812E7200A1DA9A /* UILabelAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelAdditions.m; sourceTree = "<group>"; };
+		0A5F483519812E7200A1DA9A /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		0A5F483619812E7200A1DA9A /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		0A5F483719812E7200A1DA9A /* UIViewControllerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerAdditions.h; sourceTree = "<group>"; };
+		0A5F483819812E7200A1DA9A /* UIViewControllerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerAdditions.m; sourceTree = "<group>"; };
+		0ACD01121D5C6054003F3711 /* tapkit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = tapkit.podspec; sourceTree = SOURCE_ROOT; };
+		0ACD01131D5C609A003F3711 /* publish.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = publish.md; sourceTree = "<group>"; };
+		2337F6041981141500C0768E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2337F6051981141500C0768E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2337F6061981141500C0768E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2337F6071981141500C0768E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2337F6081981141500C0768E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2337F6091981141500C0768E /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A2957811933865900E29848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A29578C1933865900E29848 /* UIKit.framework in Frameworks */,
+				0A2957881933865900E29848 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A29577B1933865900E29848 = {
+			isa = PBXGroup;
+			children = (
+				0A29578D1933865900E29848 /* TapKitDemo */,
+				0A5F480A19812E7200A1DA9A /* tapkit */,
+				0A2957861933865900E29848 /* Frameworks */,
+				0A2957851933865900E29848 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A2957851933865900E29848 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A2957841933865900E29848 /* TapKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A2957861933865900E29848 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A2957871933865900E29848 /* Foundation.framework */,
+				0A29578B1933865900E29848 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A29578D1933865900E29848 /* TapKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2337F6071981141500C0768E /* Info.plist */,
+				2337F6081981141500C0768E /* main.m */,
+				2337F6091981141500C0768E /* Prefix.pch */,
+				2337F6041981141500C0768E /* AppDelegate.h */,
+				2337F6051981141500C0768E /* AppDelegate.m */,
+				0A3BDBB11CC9D3BF007F170E /* TKViewController.h */,
+				0A3BDBB21CC9D3BF007F170E /* TKViewController.m */,
+				0A3BDBB31CC9D3BF007F170E /* TKViewController.xib */,
+				2337F6061981141500C0768E /* Images.xcassets */,
+				0ACD01141D5C6155003F3711 /* Support */,
+			);
+			path = TapKitDemo;
+			sourceTree = "<group>";
+		};
+		0A5F480A19812E7200A1DA9A /* tapkit */ = {
+			isa = PBXGroup;
+			children = (
+				0A5F481719812E7200A1DA9A /* tapkit.h */,
+				0A5F482319812E7200A1DA9A /* TKMacro.h */,
+				0A5F481819812E7200A1DA9A /* TKCommon.h */,
+				0A5F481919812E7200A1DA9A /* TKCommon.m */,
+				0A5F480B19812E7200A1DA9A /* NSArrayAdditions.h */,
+				0A5F480C19812E7200A1DA9A /* NSArrayAdditions.m */,
+				0A5F480D19812E7200A1DA9A /* NSDataAdditions.h */,
+				0A5F480E19812E7200A1DA9A /* NSDataAdditions.m */,
+				0A5F481119812E7200A1DA9A /* NSDictionaryAdditions.h */,
+				0A5F481219812E7200A1DA9A /* NSDictionaryAdditions.m */,
+				0A5F481319812E7200A1DA9A /* NSObjectAdditions.h */,
+				0A5F481419812E7200A1DA9A /* NSObjectAdditions.m */,
+				0A5F481519812E7200A1DA9A /* NSStringAdditions.h */,
+				0A5F481619812E7200A1DA9A /* NSStringAdditions.m */,
+				0A5F482D19812E7200A1DA9A /* UIButtonAdditions.h */,
+				0A5F482E19812E7200A1DA9A /* UIButtonAdditions.m */,
+				0A5F482F19812E7200A1DA9A /* UILabelAdditions.h */,
+				0A5F483019812E7200A1DA9A /* UILabelAdditions.m */,
+				0A5F483519812E7200A1DA9A /* UIViewAdditions.h */,
+				0A5F483619812E7200A1DA9A /* UIViewAdditions.m */,
+				0A5F483719812E7200A1DA9A /* UIViewControllerAdditions.h */,
+				0A5F483819812E7200A1DA9A /* UIViewControllerAdditions.m */,
+				0A5F481F19812E7200A1DA9A /* TKDiskCache.h */,
+				0A5F482019812E7200A1DA9A /* TKDiskCache.m */,
+				0A5F482419812E7200A1DA9A /* TKMemoryCache.h */,
+				0A5F482519812E7200A1DA9A /* TKMemoryCache.m */,
+			);
+			path = tapkit;
+			sourceTree = "<group>";
+		};
+		0ACD01141D5C6155003F3711 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0ACD01121D5C6054003F3711 /* tapkit.podspec */,
+				0ACD01131D5C609A003F3711 /* publish.md */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A2957831933865900E29848 /* TapKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2957B01933865900E29848 /* Build configuration list for PBXNativeTarget "TapKitDemo" */;
+			buildPhases = (
+				0A2957801933865900E29848 /* Sources */,
+				0A2957811933865900E29848 /* Frameworks */,
+				0A2957821933865900E29848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapKitDemo;
+			productName = TapKitDemo;
+			productReference = 0A2957841933865900E29848 /* TapKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A29577C1933865900E29848 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Tapmob;
+			};
+			buildConfigurationList = 0A29577F1933865900E29848 /* Build configuration list for PBXProject "TapKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A29577B1933865900E29848;
+			productRefGroup = 0A2957851933865900E29848 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A2957831933865900E29848 /* TapKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A2957821933865900E29848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2337F60D1981141500C0768E /* Images.xcassets in Resources */,
+				0A3BDBB51CC9D3BF007F170E /* TKViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A2957801933865900E29848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5F483919812E7200A1DA9A /* NSArrayAdditions.m in Sources */,
+				0A5F484D19812E7200A1DA9A /* UIViewControllerAdditions.m in Sources */,
+				0A5F483A19812E7200A1DA9A /* NSDataAdditions.m in Sources */,
+				0A5F484919812E7200A1DA9A /* UILabelAdditions.m in Sources */,
+				0A5F483E19812E7200A1DA9A /* NSStringAdditions.m in Sources */,
+				0A5F484219812E7200A1DA9A /* TKDiskCache.m in Sources */,
+				0A3BDBB41CC9D3BF007F170E /* TKViewController.m in Sources */,
+				0A5F484C19812E7200A1DA9A /* UIViewAdditions.m in Sources */,
+				0A5F484419812E7200A1DA9A /* TKMemoryCache.m in Sources */,
+				0A5F483F19812E7200A1DA9A /* TKCommon.m in Sources */,
+				0A5F484819812E7200A1DA9A /* UIButtonAdditions.m in Sources */,
+				2337F60F1981141500C0768E /* main.m in Sources */,
+				0A5F483D19812E7200A1DA9A /* NSObjectAdditions.m in Sources */,
+				0A5F483C19812E7200A1DA9A /* NSDictionaryAdditions.m in Sources */,
+				2337F60C1981141500C0768E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A2957AE1933865900E29848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A2957AF1933865900E29848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A2957B11933865900E29848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TapKitDemo/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					$SRCROOT,
+				);
+				INFOPLIST_FILE = TapKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A2957B21933865900E29848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TapKitDemo/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					$SRCROOT,
+				);
+				INFOPLIST_FILE = TapKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A29577F1933865900E29848 /* Build configuration list for PBXProject "TapKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2957AE1933865900E29848 /* Debug */,
+				0A2957AF1933865900E29848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A2957B01933865900E29848 /* Build configuration list for PBXNativeTarget "TapKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2957B11933865900E29848 /* Debug */,
+				0A2957B21933865900E29848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A29577C1933865900E29848 /* Project object */;
+}
