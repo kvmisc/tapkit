@@ -7,7 +7,6 @@
 //
 
 #import "NSDictionaryAdditions.h"
-#import "NSStringAdditions.h"
 
 @implementation NSDictionary (TapKit)
 
@@ -20,22 +19,6 @@
     return object;
   }
   return nil;
-}
-
-
-
-#pragma mark - URL
-
-- (NSString *)URLQueryString
-{
-  NSMutableArray *pairAry = [[NSMutableArray alloc] init];
-
-  [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-    NSString *pair = [[NSString alloc] initWithFormat:@"%@=%@", key, [obj URLEncodedString]];
-    [pairAry addObject:pair];
-  }];
-
-  return [pairAry componentsJoinedByString:@"&"];
 }
 
 @end

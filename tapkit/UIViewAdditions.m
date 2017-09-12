@@ -191,18 +191,6 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 #pragma mark - Hierarchy
 
-- (UIViewController *)viewController
-{
-  for ( UIView *next=self; next; next=next.superview ) {
-    UIResponder *nextResponder = [next nextResponder];
-    if ( [nextResponder isKindOfClass:[UIViewController class]] ) {
-      return ((UIViewController *)nextResponder);
-    }
-  }
-  return nil;
-}
-
-
 - (void)bringToFront
 {
   [self.superview bringSubviewToFront:self];

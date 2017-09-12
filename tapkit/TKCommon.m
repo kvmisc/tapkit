@@ -13,27 +13,15 @@
 
 void TKPresentSystemMessage(NSString *message)
 {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
-  if ( [UIAlertController class] ) {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message
-                                                                             message:nil
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL]];
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message
+                                                                           message:nil
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+  [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL]];
 
-    UIViewController *top = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    while ( top.presentedViewController ) { top = top.presentedViewController; }
+  UIViewController *top = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+  while ( top.presentedViewController ) { top = top.presentedViewController; }
 
-    [top presentViewController:alertController animated:YES completion:NULL];
-  } else
-#endif
-  {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:message
-                                                        message:nil
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    [alertView show];
-  }
+  [top presentViewController:alertController animated:YES completion:NULL];
 }
 
 

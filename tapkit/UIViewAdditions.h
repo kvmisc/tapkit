@@ -62,9 +62,6 @@
 /// Hierarchy
 ///-------------------------------
 
-- (UIViewController *)viewController;
-
-
 - (void)bringToFront;
 
 - (void)sendToBack;

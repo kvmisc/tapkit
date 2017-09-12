@@ -36,18 +36,4 @@
 
 - (NSString *)SHA1HashString;
 
-
-///-------------------------------
-/// URL
-///-------------------------------
-
-- (NSString *)URLEncodedString;
-
-- (NSString *)URLDecodedString;
-
-
-- (NSDictionary *)URLQueryDictionary;
-
-- (NSString *)stringByAppendingQueryDictionary:(NSDictionary *)dictionary;
-
 @end

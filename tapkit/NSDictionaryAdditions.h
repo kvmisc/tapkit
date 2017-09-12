@@ -16,13 +16,6 @@
 
 - (id)objectOrNilForKey:(id)key;
 
-
-///-------------------------------
-/// URL
-///-------------------------------
-
-- (NSString *)URLQueryString;
-
 @end
 
 
