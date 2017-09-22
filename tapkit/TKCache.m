@@ -123,6 +123,8 @@ static TKCache *Cache = nil;
       item.object = object;
     }
 
+    TKSaveArchivableObject(_itemAry, [self pathForKey:CACHE_SETTING]);
+
     [_lock unlock];
   }
   [self delayCleanUp];
@@ -140,6 +142,7 @@ static TKCache *Cache = nil;
         break;
       }
     }
+    TKSaveArchivableObject(_itemAry, [self pathForKey:CACHE_SETTING]);
     [_lock unlock];
   }
   [self delayCleanUp];
@@ -182,25 +185,12 @@ static TKCache *Cache = nil;
 
 
 
-#pragma mark - Disk operation
-
-- (void)synchronize
-{
-  if ( TK_S_NONEMPTY(_path) ) {
-    [_lock lock];
-    TKSaveArchivableObject(_itemAry, [self pathForKey:CACHE_SETTING]);
-    [_lock unlock];
-  }
-}
+#pragma mark - Misc
 
 - (NSString *)pathForKey:(NSString *)key
 {
   return [_path stringByAppendingPathComponent:key];
 }
-
-
-
-#pragma mark - Misc
 
 - (void)prepareForDeallocate
 {
@@ -239,6 +229,7 @@ static TKCache *Cache = nil;
       ++i;
     }
   }
+  TKSaveArchivableObject(_itemAry, [self pathForKey:CACHE_SETTING]);
   [_lock unlock];
 }
 

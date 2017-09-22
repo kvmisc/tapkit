@@ -45,17 +45,10 @@
 
 
 ///-------------------------------
-/// Disk operation
-///-------------------------------
-
-- (void)synchronize;
-
-- (NSString *)pathForKey:(NSString *)key;
-
-
-///-------------------------------
 /// Misc
 ///-------------------------------
+
+- (NSString *)pathForKey:(NSString *)key;
 
 - (void)prepareForDeallocate;
 

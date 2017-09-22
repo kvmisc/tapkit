@@ -8,6 +8,7 @@
 
 #import "TKMacro.h"
 #import "TKCommon.h"
+#import "TKCache.h"
 
 #import "NSArrayAdditions.h"
 #import "NSDataAdditions.h"
@@ -18,5 +19,3 @@
 #import "UILabelAdditions.h"
 #import "UIViewAdditions.h"
 #import "UIViewControllerAdditions.h"
-
-#import "TKCache.h"

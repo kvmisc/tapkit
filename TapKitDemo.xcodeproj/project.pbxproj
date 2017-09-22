@@ -132,6 +132,8 @@
 				0A5F482319812E7200A1DA9A /* TKMacro.h */,
 				0A5F481819812E7200A1DA9A /* TKCommon.h */,
 				0A5F481919812E7200A1DA9A /* TKCommon.m */,
+				0A5F481F19812E7200A1DA9A /* TKCache.h */,
+				0A5F482019812E7200A1DA9A /* TKCache.m */,
 				0A5F480B19812E7200A1DA9A /* NSArrayAdditions.h */,
 				0A5F480C19812E7200A1DA9A /* NSArrayAdditions.m */,
 				0A5F480D19812E7200A1DA9A /* NSDataAdditions.h */,
@@ -150,8 +152,6 @@
 				0A5F483619812E7200A1DA9A /* UIViewAdditions.m */,
 				0A5F483719812E7200A1DA9A /* UIViewControllerAdditions.h */,
 				0A5F483819812E7200A1DA9A /* UIViewControllerAdditions.m */,
-				0A5F481F19812E7200A1DA9A /* TKCache.h */,
-				0A5F482019812E7200A1DA9A /* TKCache.m */,
 			);
 			path = tapkit;
 			sourceTree = "<group>";
