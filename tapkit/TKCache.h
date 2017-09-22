@@ -52,6 +52,13 @@
 
 - (NSString *)pathForKey:(NSString *)key;
 
+
+///-------------------------------
+/// Misc
+///-------------------------------
+
+- (void)prepareForDeallocate;
+
 @end
 
 

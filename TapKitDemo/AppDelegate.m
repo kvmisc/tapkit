@@ -18,14 +18,6 @@
   
   _window.rootViewController = [[TKViewController alloc] init];
 
-
-  NSString *url = @"http://www.abc.com/login.do?aa=a s d f&bb=1+2";
-
-  NSCharacterSet *allowedSet = [[NSCharacterSet characterSetWithCharactersInString:@":/?&=;+!@#$()',*"] invertedSet];
-  NSString *string = [url stringByAddingPercentEncodingWithAllowedCharacters:allowedSet];
-  NSLog(@"%@", string);
-  NSLog(@"%@", [string stringByRemovingPercentEncoding]);
-
   [_window makeKeyAndVisible];
   return YES;
 }

@@ -200,6 +200,15 @@ static TKCache *Cache = nil;
 
 
 
+#pragma mark - Misc
+
+- (void)prepareForDeallocate
+{
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(doCleanUp:) object:nil];
+}
+
+
+
 #pragma mark - Private methods
 
 - (TKCacheItem *)itemByKey:(NSString *)key
