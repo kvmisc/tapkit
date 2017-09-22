@@ -19,5 +19,4 @@
 #import "UIViewAdditions.h"
 #import "UIViewControllerAdditions.h"
 
-#import "TKDiskCache.h"
-#import "TKMemoryCache.h"
+#import "TKCache.h"
