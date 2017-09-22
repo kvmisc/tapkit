@@ -15,7 +15,7 @@
 
 #pragma mark - Validity
 
-- (BOOL)isInCharacterSet:(NSCharacterSet *)characterSet
+- (BOOL)tk_isInCharacterSet:(NSCharacterSet *)characterSet
 {
   for ( NSUInteger i=0; i<[self length]; ++i ) {
     if ( ![characterSet characterIsMember:[self characterAtIndex:i]] ) {
@@ -25,7 +25,7 @@
   return YES;
 }
 
-- (BOOL)hasInCharacterSet:(NSCharacterSet *)characterSet
+- (BOOL)tk_hasInCharacterSet:(NSCharacterSet *)characterSet
 {
   for ( NSUInteger i=0; i<[self length]; ++i ) {
     if ( [characterSet characterIsMember:[self characterAtIndex:i]] ) {
@@ -39,7 +39,7 @@
 
 #pragma mark - Finding
 
-- (NSUInteger)locationOfString:(NSString *)string
+- (NSUInteger)tk_locationOfString:(NSString *)string
 {
   if ( TK_S_NONEMPTY(string) ) {
     NSRange range = [self rangeOfString:string];
@@ -48,23 +48,23 @@
   return NSNotFound;
 }
 
-- (BOOL)containsString:(NSString *)string
+- (BOOL)tk_containsString:(NSString *)string
 {
-  return ( [self locationOfString:string]!=NSNotFound );
+  return ( [self tk_locationOfString:string]!=NSNotFound );
 }
 
 
 
 #pragma mark - Hash
 
-- (NSString *)MD5HashString
+- (NSString *)tk_MD5HashString
 {
-  return [[self dataUsingEncoding:NSUTF8StringEncoding] MD5HashString];
+  return [[self dataUsingEncoding:NSUTF8StringEncoding] tk_MD5HashString];
 }
 
-- (NSString *)SHA1HashString
+- (NSString *)tk_SHA1HashString
 {
-  return [[self dataUsingEncoding:NSUTF8StringEncoding] SHA1HashString];
+  return [[self dataUsingEncoding:NSUTF8StringEncoding] tk_SHA1HashString];
 }
 
 @end

@@ -13,7 +13,7 @@
 
 #pragma mark - Querying
 
-- (id)objectOrNilAtIndex:(NSUInteger)idx
+- (id)tk_objectOrNilAtIndex:(NSUInteger)idx
 {
   if ( idx<[self count] ) {
     return [self objectAtIndex:idx];
@@ -21,7 +21,7 @@
   return nil;
 }
 
-- (id)randomObject
+- (id)tk_randomObject
 {
   if ( [self count]>0 ) {
     NSUInteger idx = arc4random() % [self count];
@@ -31,12 +31,12 @@
 }
 
 
-- (BOOL)hasObjectEqualTo:(id)object
+- (BOOL)tk_hasObjectEqualTo:(id)object
 {
   return ( [self indexOfObject:object]!=NSNotFound );
 }
 
-- (BOOL)hasObjectIdenticalTo:(id)object
+- (BOOL)tk_hasObjectIdenticalTo:(id)object
 {
   return ( [self indexOfObjectIdenticalTo:object]!=NSNotFound );
 }
@@ -45,13 +45,13 @@
 
 #pragma mark - Key-Value Coding
 
-- (NSArray *)objectsForKeyPath:(NSString *)keyPath equalTo:(id)value
+- (NSArray *)tk_objectsForKeyPath:(NSString *)keyPath equalTo:(id)value
 {
   NSMutableArray *objectAry = [[NSMutableArray alloc] init];
 
   for ( NSUInteger i=0; i<[self count]; ++i ) {
     id object = [self objectAtIndex:i];
-    if ( [object isValueForKeyPath:keyPath equalTo:value] ) {
+    if ( [object tk_isValueForKeyPath:keyPath equalTo:value] ) {
       [objectAry addObject:object];
     }
   }
@@ -62,13 +62,13 @@
   return nil;
 }
 
-- (NSArray *)objectsForKeyPath:(NSString *)keyPath identicalTo:(id)value
+- (NSArray *)tk_objectsForKeyPath:(NSString *)keyPath identicalTo:(id)value
 {
   NSMutableArray *objectAry = [[NSMutableArray alloc] init];
 
   for ( NSUInteger i=0; i<[self count]; ++i ) {
     id object = [self objectAtIndex:i];
-    if ( [object isValueForKeyPath:keyPath identicalTo:value] ) {
+    if ( [object tk_isValueForKeyPath:keyPath identicalTo:value] ) {
       [objectAry addObject:object];
     }
   }
@@ -80,26 +80,74 @@
 }
 
 
-- (id)objectForKeyPath:(NSString *)keyPath equalTo:(id)value
+- (id)tk_objectForKeyPath:(NSString *)keyPath equalTo:(id)value
 {
   for ( NSUInteger i=0; i<[self count]; ++i ) {
     id object = [self objectAtIndex:i];
-    if ( [object isValueForKeyPath:keyPath equalTo:value] ) {
+    if ( [object tk_isValueForKeyPath:keyPath equalTo:value] ) {
       return object;
     }
   }
   return nil;
 }
 
-- (id)objectForKeyPath:(NSString *)keyPath identicalTo:(id)value
+- (id)tk_objectForKeyPath:(NSString *)keyPath identicalTo:(id)value
 {
   for ( NSUInteger i=0; i<[self count]; ++i ) {
     id object = [self objectAtIndex:i];
-    if ( [object isValueForKeyPath:keyPath identicalTo:value] ) {
+    if ( [object tk_isValueForKeyPath:keyPath identicalTo:value] ) {
       return object;
     }
   }
   return nil;
+}
+
+
+- (NSInteger)tk_indexOfObjectForKeyPath:(NSString *)keyPath equalTo:(id)value
+{
+  for ( NSUInteger i=0; i<[self count]; ++i ) {
+    id object = [self objectAtIndex:i];
+    if ( [object tk_isValueForKeyPath:keyPath equalTo:value] ) {
+      return i;
+    }
+  }
+  return NSNotFound;
+}
+
+- (NSInteger)tk_indexOfObjectForKeyPath:(NSString *)keyPath identicalTo:(id)value
+{
+  for ( NSUInteger i=0; i<[self count]; ++i ) {
+    id object = [self objectAtIndex:i];
+    if ( [object tk_isValueForKeyPath:keyPath identicalTo:value] ) {
+      return i;
+    }
+  }
+  return NSNotFound;
+}
+
+
+- (NSInteger)tk_numberOfObjectsForKeyPath:(NSString *)keyPath equalTo:(id)value
+{
+  NSInteger count = 0;
+  for ( NSUInteger i=0; i<[self count]; ++i ) {
+    id object = [self objectAtIndex:i];
+    if ( [object tk_isValueForKeyPath:keyPath equalTo:value] ) {
+      count++;
+    }
+  }
+  return count;
+}
+
+- (NSInteger)tk_numberOfObjectsForKeyPath:(NSString *)keyPath identicalTo:(id)value
+{
+  NSInteger count = 0;
+  for ( NSUInteger i=0; i<[self count]; ++i ) {
+    id object = [self objectAtIndex:i];
+    if ( [object tk_isValueForKeyPath:keyPath identicalTo:value] ) {
+      count++;
+    }
+  }
+  return count;
 }
 
 @end
@@ -110,7 +158,7 @@
 
 #pragma mark - Content management
 
-- (id)addObjectIfNotNil:(id)object
+- (id)tk_addObjectIfNotNil:(id)object
 {
   if ( object ) {
     [self addObject:object];
@@ -119,10 +167,10 @@
   return nil;
 }
 
-- (id)addUnequalObjectIfNotNil:(id)object
+- (id)tk_addUnequalObjectIfNotNil:(id)object
 {
   if ( object ) {
-    if ( ![self hasObjectEqualTo:object] ) {
+    if ( ![self tk_hasObjectEqualTo:object] ) {
       [self addObject:object];
       return object;
     }
@@ -130,10 +178,10 @@
   return nil;
 }
 
-- (id)addUnidenticalObjectIfNotNil:(id)object
+- (id)tk_addUnidenticalObjectIfNotNil:(id)object
 {
   if ( object ) {
-    if ( ![self hasObjectIdenticalTo:object] ) {
+    if ( ![self tk_hasObjectIdenticalTo:object] ) {
       [self addObject:object];
       return object;
     }
@@ -141,7 +189,7 @@
   return nil;
 }
 
-- (id)insertObject:(id)object atIndexIfNotNil:(NSUInteger)idx
+- (id)tk_insertObject:(id)object atIndexIfNotNil:(NSUInteger)idx
 {
   if ( object ) {
     if ( idx<=[self count] ) {
@@ -153,7 +201,7 @@
 }
 
 
-- (void)removeFirstObject
+- (void)tk_removeFirstObject
 {
   if ( [self count]>0 ) {
     [self removeObjectAtIndex:0];
@@ -165,7 +213,7 @@
 #pragma mark - Ordering
 
 // http://en.wikipedia.org/wiki/Knuth_shuffle
-- (void)shuffle
+- (void)tk_shuffle
 {
   for ( NSUInteger i=[self count]; i>1; --i ) {
 
@@ -183,7 +231,7 @@
   }
 }
 
-- (void)reverse
+- (void)tk_reverse
 {
   for ( NSUInteger i=0; i<floor([self count]/2.0); ++i ) {
     NSUInteger idx = [self count] - (i+1);
@@ -191,7 +239,7 @@
   }
 }
 
-- (id)moveObjectAtIndex:(NSUInteger)idx toIndex:(NSUInteger)toIdx
+- (id)tk_moveObjectAtIndex:(NSUInteger)idx toIndex:(NSUInteger)toIdx
 {
   if ( idx!=toIdx ) {
     if ( (idx<[self count]) && (toIdx<[self count]) ) {
@@ -208,12 +256,12 @@
 
 #pragma mark - Stack operation
 
-- (id)push:(id)object
+- (id)tk_push:(id)object
 {
-  return [self addObjectIfNotNil:object];
+  return [self tk_addObjectIfNotNil:object];
 }
 
-- (id)pop
+- (id)tk_pop
 {
   id object = [self lastObject];
   [self removeLastObject];
@@ -224,15 +272,15 @@
 
 #pragma mark - Queue operation
 
-- (id)enqueue:(id)object
+- (id)tk_enqueue:(id)object
 {
-  return [self addObjectIfNotNil:object];
+  return [self tk_addObjectIfNotNil:object];
 }
 
-- (id)dequeue
+- (id)tk_dequeue
 {
   id object = [self firstObject];
-  [self removeFirstObject];
+  [self tk_removeFirstObject];
   return object;
 }
 

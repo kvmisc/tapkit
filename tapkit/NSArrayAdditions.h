@@ -14,28 +14,38 @@
 /// Querying
 ///-------------------------------
 
-- (id)objectOrNilAtIndex:(NSUInteger)idx;
+- (id)tk_objectOrNilAtIndex:(NSUInteger)idx;
 
-- (id)randomObject;
+- (id)tk_randomObject;
 
 
-- (BOOL)hasObjectEqualTo:(id)object;
+- (BOOL)tk_hasObjectEqualTo:(id)object;
 
-- (BOOL)hasObjectIdenticalTo:(id)object;
+- (BOOL)tk_hasObjectIdenticalTo:(id)object;
 
 
 ///-------------------------------
 /// Key-Value Coding
 ///-------------------------------
 
-- (NSArray *)objectsForKeyPath:(NSString *)keyPath equalTo:(id)value;
+- (NSArray *)tk_objectsForKeyPath:(NSString *)keyPath equalTo:(id)value;
 
-- (NSArray *)objectsForKeyPath:(NSString *)keyPath identicalTo:(id)value;
+- (NSArray *)tk_objectsForKeyPath:(NSString *)keyPath identicalTo:(id)value;
 
 
-- (id)objectForKeyPath:(NSString *)keyPath equalTo:(id)value;
+- (id)tk_objectForKeyPath:(NSString *)keyPath equalTo:(id)value;
 
-- (id)objectForKeyPath:(NSString *)keyPath identicalTo:(id)value;
+- (id)tk_objectForKeyPath:(NSString *)keyPath identicalTo:(id)value;
+
+
+- (NSInteger)tk_indexOfObjectForKeyPath:(NSString *)keyPath equalTo:(id)value;
+
+- (NSInteger)tk_indexOfObjectForKeyPath:(NSString *)keyPath identicalTo:(id)value;
+
+
+- (NSInteger)tk_numberOfObjectsForKeyPath:(NSString *)keyPath equalTo:(id)value;
+
+- (NSInteger)tk_numberOfObjectsForKeyPath:(NSString *)keyPath identicalTo:(id)value;
 
 @end
 
@@ -47,44 +57,44 @@
 /// Content management
 ///-------------------------------
 
-- (id)addObjectIfNotNil:(id)object;
+- (id)tk_addObjectIfNotNil:(id)object;
 
-- (id)addUnequalObjectIfNotNil:(id)object;
+- (id)tk_addUnequalObjectIfNotNil:(id)object;
 
-- (id)addUnidenticalObjectIfNotNil:(id)object;
+- (id)tk_addUnidenticalObjectIfNotNil:(id)object;
 
-- (id)insertObject:(id)object atIndexIfNotNil:(NSUInteger)idx;
+- (id)tk_insertObject:(id)object atIndexIfNotNil:(NSUInteger)idx;
 
 
-- (void)removeFirstObject;
+- (void)tk_removeFirstObject;
 
 
 ///-------------------------------
 /// Ordering
 ///-------------------------------
 
-- (void)shuffle;
+- (void)tk_shuffle;
 
-- (void)reverse;
+- (void)tk_reverse;
 
-- (id)moveObjectAtIndex:(NSUInteger)idx toIndex:(NSUInteger)toIdx;
+- (id)tk_moveObjectAtIndex:(NSUInteger)idx toIndex:(NSUInteger)toIdx;
 
 
 ///-------------------------------
 /// Stack operation
 ///-------------------------------
 
-- (id)push:(id)object;
+- (id)tk_push:(id)object;
 
-- (id)pop;
+- (id)tk_pop;
 
 
 ///-------------------------------
 /// Queue operation
 ///-------------------------------
 
-- (id)enqueue:(id)object;
+- (id)tk_enqueue:(id)object;
 
-- (id)dequeue;
+- (id)tk_dequeue;
 
 @end

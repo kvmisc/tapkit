@@ -15,8 +15,8 @@
 /// Content management
 ///-------------------------------
 
-- (void)presentChildViewController:(UIViewController *)childViewController inView:(UIView *)containerView;
+- (void)tk_presentChildViewController:(UIViewController *)childViewController inView:(UIView *)containerView;
 
-- (void)dismissChildViewController:(UIViewController *)childViewController;
+- (void)tk_dismissChildViewController:(UIViewController *)childViewController;
 
 @end

@@ -12,7 +12,7 @@
 
 #pragma mark - Querying
 
-- (id)objectOrNilForKey:(id)key
+- (id)tk_objectOrNilForKey:(id)key
 {
   id object = [self objectForKey:key];
   if ( object!=[NSNull null] ) {
@@ -29,14 +29,14 @@
 
 #pragma mark - Content management
 
-- (void)setObject:(id)object forKeyIfNotNil:(id)key
+- (void)tk_setObject:(id)object forKeyIfNotNil:(id)key
 {
   if ( object && key ) {
     [self setObject:object forKey:key];
   }
 }
 
-- (void)removeObjectForKeyIfNotNil:(id)key
+- (void)tk_removeObjectForKeyIfNotNil:(id)key
 {
   if ( key ) {
     [self removeObjectForKey:key];

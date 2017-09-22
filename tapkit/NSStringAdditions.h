@@ -14,26 +14,26 @@
 /// Validity
 ///-------------------------------
 
-- (BOOL)isInCharacterSet:(NSCharacterSet *)characterSet;
+- (BOOL)tk_isInCharacterSet:(NSCharacterSet *)characterSet;
 
-- (BOOL)hasInCharacterSet:(NSCharacterSet *)characterSet;
+- (BOOL)tk_hasInCharacterSet:(NSCharacterSet *)characterSet;
 
 
 ///-------------------------------
 /// Finding
 ///-------------------------------
 
-- (NSUInteger)locationOfString:(NSString *)string;
+- (NSUInteger)tk_locationOfString:(NSString *)string;
 
-- (BOOL)containsString:(NSString *)string;
+- (BOOL)tk_containsString:(NSString *)string;
 
 
 ///-------------------------------
 /// Hash
 ///-------------------------------
 
-- (NSString *)MD5HashString;
+- (NSString *)tk_MD5HashString;
 
-- (NSString *)SHA1HashString;
+- (NSString *)tk_SHA1HashString;
 
 @end

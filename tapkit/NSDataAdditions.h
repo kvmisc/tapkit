@@ -14,8 +14,8 @@
 /// Hash
 ///-------------------------------
 
-- (NSString *)MD5HashString;
+- (NSString *)tk_MD5HashString;
 
-- (NSString *)SHA1HashString;
+- (NSString *)tk_SHA1HashString;
 
 @end

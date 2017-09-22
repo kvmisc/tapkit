@@ -13,7 +13,7 @@
 
 #pragma mark - Key-Value Coding
 
-- (BOOL)isValueForKeyPath:(NSString *)keyPath equalTo:(id)value
+- (BOOL)tk_isValueForKeyPath:(NSString *)keyPath equalTo:(id)value
 {
   if ( TK_S_NONEMPTY(keyPath) ) {
     id aValue = [self valueForKeyPath:keyPath];
@@ -27,7 +27,7 @@
   return NO;
 }
 
-- (BOOL)isValueForKeyPath:(NSString *)keyPath identicalTo:(id)value
+- (BOOL)tk_isValueForKeyPath:(NSString *)keyPath identicalTo:(id)value
 {
   if ( TK_S_NONEMPTY(keyPath) ) {
     return ( [self valueForKeyPath:keyPath]==value );

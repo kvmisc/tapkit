@@ -12,14 +12,14 @@
 
 #pragma mark - Content management
 
-- (void)presentChildViewController:(UIViewController *)childViewController inView:(UIView *)containerView
+- (void)tk_presentChildViewController:(UIViewController *)childViewController inView:(UIView *)containerView
 {
   [self addChildViewController:childViewController];
   [(containerView)?:(self.view) addSubview:childViewController.view];
   [childViewController didMoveToParentViewController:self];
 }
 
-- (void)dismissChildViewController:(UIViewController *)childViewController
+- (void)tk_dismissChildViewController:(UIViewController *)childViewController
 {
   [childViewController willMoveToParentViewController:nil];
   [childViewController.view removeFromSuperview];

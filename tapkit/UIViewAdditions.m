@@ -28,111 +28,14 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 @implementation UIView (TapKit)
 
-#pragma mark - Metric properties
-
-- (CGFloat)leftX
-{
-  return self.frame.origin.x;
-}
-- (void)setLeftX:(CGFloat)leftX
-{
-  self.frame = CGRectMake(leftX, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
-}
-
-- (CGFloat)centerX
-{
-  return self.center.x;
-}
-- (void)setCenterX:(CGFloat)centerX
-{
-  self.center = CGPointMake(centerX, self.center.y);
-}
-
-- (CGFloat)rightX
-{
-  return self.frame.origin.x + self.frame.size.width;
-}
-- (void)setRightX:(CGFloat)rightX
-{
-  self.frame = CGRectMake(rightX-self.frame.size.width, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
-}
-
-
-- (CGFloat)topY
-{
-  return self.frame.origin.y;
-}
-- (void)setTopY:(CGFloat)topY
-{
-  self.frame = CGRectMake(self.frame.origin.x, topY, self.frame.size.width, self.frame.size.height);
-}
-
-- (CGFloat)centerY
-{
-  return self.center.y;
-}
-- (void)setCenterY:(CGFloat)centerY
-{
-  self.center = CGPointMake(self.center.x, centerY);
-}
-
-- (CGFloat)bottomY
-{
-  return self.frame.origin.y + self.frame.size.height;
-}
-- (void)setBottomY:(CGFloat)bottomY
-{
-  self.frame = CGRectMake(self.frame.origin.x, bottomY-self.frame.size.height, self.frame.size.width, self.frame.size.height);
-}
-
-
-- (CGFloat)width
-{
-  return self.frame.size.width;
-}
-- (void)setWidth:(CGFloat)width
-{
-  self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height);
-}
-
-- (CGFloat)height
-{
-  return self.frame.size.height;
-}
-- (void)setHeight:(CGFloat)height
-{
-  self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
-}
-
-
-- (CGPoint)origin
-{
-  return self.frame.origin;
-}
-- (void)setOrigin:(CGPoint)origin
-{
-  self.frame = CGRectMake(origin.x, origin.y, self.frame.size.width, self.frame.size.height);
-}
-
-- (CGSize)size
-{
-  return self.frame.size;
-}
-- (void)setSize:(CGSize)size
-{
-  self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, size.width, size.height);
-}
-
-
-
 #pragma mark - Nib file
 
-+ (id)loadFromNib
++ (id)tk_loadFromNib
 {
-  return [self loadFromNibNamed:NSStringFromClass(self)];
+  return [self tk_loadFromNibNamed:NSStringFromClass(self)];
 }
 
-+ (id)loadFromNibNamed:(NSString *)name
++ (id)tk_loadFromNibNamed:(NSString *)name
 {
   if ( TK_S_NONEMPTY(name) ) {
     return [[[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil] lastObject];
@@ -144,7 +47,7 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 #pragma mark - Image content
 
-- (UIImage *)imageRep
+- (UIImage *)tk_imageRep
 {
   UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0);
   [self.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -157,13 +60,13 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 #pragma mark - Finding
 
-- (UIView *)descendantOrSelfWithClass:(Class)cls
+- (UIView *)tk_descendantOrSelfWithClass:(Class)cls
 {
   if ( [self isKindOfClass:cls] ) {
     return self;
   }
   for ( UIView *subview in self.subviews ) {
-    UIView *view = [subview descendantOrSelfWithClass:cls];
+    UIView *view = [subview tk_descendantOrSelfWithClass:cls];
     if ( view ) {
       return view;
     }
@@ -171,18 +74,18 @@ UIView *TKFindFirstResponderInView(UIView *topView)
   return nil;
 }
 
-- (UIView *)ancestorOrSelfWithClass:(Class)cls
+- (UIView *)tk_ancestorOrSelfWithClass:(Class)cls
 {
   if ( [self isKindOfClass:cls] ) {
     return self;
   } else if ( self.superview ) {
-    return [self.superview ancestorOrSelfWithClass:cls];
+    return [self.superview tk_ancestorOrSelfWithClass:cls];
   }
   return nil;
 }
 
 
-- (UIView *)findFirstResponder
+- (UIView *)tk_findFirstResponder
 {
   return TKFindFirstResponderInView(self);
 }
@@ -191,23 +94,23 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 #pragma mark - Hierarchy
 
-- (void)bringToFront
+- (void)tk_bringToFront
 {
   [self.superview bringSubviewToFront:self];
 }
 
-- (void)sendToBack
+- (void)tk_sendToBack
 {
   [self.superview sendSubviewToBack:self];
 }
 
-- (BOOL)isInFront
+- (BOOL)tk_isInFront
 {
   NSArray *subviewAry = self.superview.subviews;
   return ( [subviewAry lastObject]==self );
 }
 
-- (BOOL)isAtBack
+- (BOOL)tk_isAtBack
 {
   NSArray *subviewAry = self.superview.subviews;
   return ( [subviewAry firstObject]==self );

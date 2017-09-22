@@ -13,7 +13,7 @@
 
 #pragma mark - Hash
 
-- (NSString *)MD5HashString
+- (NSString *)tk_MD5HashString
 {
   unsigned char result[CC_MD5_DIGEST_LENGTH];
   CC_MD5([self bytes], (CC_LONG)[self length], result);
@@ -30,7 +30,7 @@
           result[12], result[13], result[14], result[15]];
 }
 
-- (NSString *)SHA1HashString
+- (NSString *)tk_SHA1HashString
 {
   unsigned char result[CC_SHA1_DIGEST_LENGTH];
   CC_SHA1([self bytes], (CC_LONG)[self length], result);

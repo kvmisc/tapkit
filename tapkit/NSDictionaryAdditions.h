@@ -14,7 +14,7 @@
 /// Querying
 ///-------------------------------
 
-- (id)objectOrNilForKey:(id)key;
+- (id)tk_objectOrNilForKey:(id)key;
 
 @end
 
@@ -26,8 +26,8 @@
 /// Content management
 ///-------------------------------
 
-- (void)setObject:(id)object forKeyIfNotNil:(id)key;
+- (void)tk_setObject:(id)object forKeyIfNotNil:(id)key;
 
-- (void)removeObjectForKeyIfNotNil:(id)key;
+- (void)tk_removeObjectForKeyIfNotNil:(id)key;
 
 @end

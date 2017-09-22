@@ -12,62 +12,43 @@
 @interface UIView (TapKit)
 
 ///-------------------------------
-/// Metric properties
-///-------------------------------
-
-@property (nonatomic, assign) CGFloat leftX;
-@property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat rightX;
-
-@property (nonatomic, assign) CGFloat topY;
-@property (nonatomic, assign) CGFloat centerY;
-@property (nonatomic, assign) CGFloat bottomY;
-
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
-
-@property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGSize size;
-
-
-///-------------------------------
 /// Nib file
 ///-------------------------------
 
-+ (id)loadFromNib;
++ (id)tk_loadFromNib;
 
-+ (id)loadFromNibNamed:(NSString *)name;
++ (id)tk_loadFromNibNamed:(NSString *)name;
 
 
 ///-------------------------------
 /// Image content
 ///-------------------------------
 
-- (UIImage *)imageRep;
+- (UIImage *)tk_imageRep;
 
 
 ///-------------------------------
 /// Finding
 ///-------------------------------
 
-- (UIView *)descendantOrSelfWithClass:(Class)cls;
+- (UIView *)tk_descendantOrSelfWithClass:(Class)cls;
 
-- (UIView *)ancestorOrSelfWithClass:(Class)cls;
+- (UIView *)tk_ancestorOrSelfWithClass:(Class)cls;
 
 
-- (UIView *)findFirstResponder;
+- (UIView *)tk_findFirstResponder;
 
 
 ///-------------------------------
 /// Hierarchy
 ///-------------------------------
 
-- (void)bringToFront;
+- (void)tk_bringToFront;
 
-- (void)sendToBack;
+- (void)tk_sendToBack;
 
-- (BOOL)isInFront;
+- (BOOL)tk_isInFront;
 
-- (BOOL)isAtBack;
+- (BOOL)tk_isAtBack;
 
 @end

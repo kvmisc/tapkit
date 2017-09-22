@@ -14,8 +14,8 @@
 /// Key-Value Coding
 ///-------------------------------
 
-- (BOOL)isValueForKeyPath:(NSString *)keyPath equalTo:(id)value;
+- (BOOL)tk_isValueForKeyPath:(NSString *)keyPath equalTo:(id)value;
 
-- (BOOL)isValueForKeyPath:(NSString *)keyPath identicalTo:(id)value;
+- (BOOL)tk_isValueForKeyPath:(NSString *)keyPath identicalTo:(id)value;
 
 @end

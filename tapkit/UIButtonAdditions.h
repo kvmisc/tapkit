@@ -15,29 +15,29 @@
 /// Handy methods
 ///-------------------------------
 
-@property (nonatomic, copy) NSString *normalTitle;
-@property (nonatomic, copy) NSString *highlightedTitle;
-@property (nonatomic, copy) NSString *disabledTitle;
-@property (nonatomic, copy) NSString *selectedTitle;
+@property (nonatomic, copy) NSString *tk_normalTitle;
+@property (nonatomic, copy) NSString *tk_highlightedTitle;
+@property (nonatomic, copy) NSString *tk_disabledTitle;
+@property (nonatomic, copy) NSString *tk_selectedTitle;
 
-@property (nonatomic, strong) UIColor *normalTitleColor;
-@property (nonatomic, strong) UIColor *highlightedTitleColor;
-@property (nonatomic, strong) UIColor *disabledTitleColor;
-@property (nonatomic, strong) UIColor *selectedTitleColor;
+@property (nonatomic, strong) UIColor *tk_normalTitleColor;
+@property (nonatomic, strong) UIColor *tk_highlightedTitleColor;
+@property (nonatomic, strong) UIColor *tk_disabledTitleColor;
+@property (nonatomic, strong) UIColor *tk_selectedTitleColor;
 
-@property (nonatomic, strong) UIColor *normalTitleShadowColor;
-@property (nonatomic, strong) UIColor *highlightedTitleShadowColor;
-@property (nonatomic, strong) UIColor *disabledTitleShadowColor;
-@property (nonatomic, strong) UIColor *selectedTitleShadowColor;
+@property (nonatomic, strong) UIColor *tk_normalTitleShadowColor;
+@property (nonatomic, strong) UIColor *tk_highlightedTitleShadowColor;
+@property (nonatomic, strong) UIColor *tk_disabledTitleShadowColor;
+@property (nonatomic, strong) UIColor *tk_selectedTitleShadowColor;
 
-@property (nonatomic, strong) UIImage *normalImage;
-@property (nonatomic, strong) UIImage *highlightedImage;
-@property (nonatomic, strong) UIImage *disabledImage;
-@property (nonatomic, strong) UIImage *selectedImage;
+@property (nonatomic, strong) UIImage *tk_normalImage;
+@property (nonatomic, strong) UIImage *tk_highlightedImage;
+@property (nonatomic, strong) UIImage *tk_disabledImage;
+@property (nonatomic, strong) UIImage *tk_selectedImage;
 
-@property (nonatomic, strong) UIImage *normalBackgroundImage;
-@property (nonatomic, strong) UIImage *highlightedBackgroundImage;
-@property (nonatomic, strong) UIImage *disabledBackgroundImage;
-@property (nonatomic, strong) UIImage *selectedBackgroundImage;
+@property (nonatomic, strong) UIImage *tk_normalBackgroundImage;
+@property (nonatomic, strong) UIImage *tk_highlightedBackgroundImage;
+@property (nonatomic, strong) UIImage *tk_disabledBackgroundImage;
+@property (nonatomic, strong) UIImage *tk_selectedBackgroundImage;
 
 @end

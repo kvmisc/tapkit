@@ -12,23 +12,23 @@
 
 #pragma mark - Handy methods
 
-+ (id)labelWithFont:(UIFont *)font
-          textColor:(UIColor *)textColor
++ (id)tk_labelWithFont:(UIFont *)font
+             textColor:(UIColor *)textColor
 {
-  return [self labelWithFont:font
-                   textColor:textColor
-               textAlignment:NSTextAlignmentLeft
-               lineBreakMode:NSLineBreakByTruncatingTail
-               numberOfLines:1
-             backgroundColor:[UIColor clearColor]];
+  return [self tk_labelWithFont:font
+                      textColor:textColor
+                  textAlignment:NSTextAlignmentLeft
+                  lineBreakMode:NSLineBreakByTruncatingTail
+                  numberOfLines:1
+                backgroundColor:[UIColor clearColor]];
 }
 
-+ (id)labelWithFont:(UIFont *)font
-          textColor:(UIColor *)textColor
-      textAlignment:(NSTextAlignment)textAlignment
-      lineBreakMode:(NSLineBreakMode)lineBreakMode
-      numberOfLines:(NSInteger)numberOfLines
-    backgroundColor:(UIColor *)backgroundColor
++ (id)tk_labelWithFont:(UIFont *)font
+             textColor:(UIColor *)textColor
+         textAlignment:(NSTextAlignment)textAlignment
+         lineBreakMode:(NSLineBreakMode)lineBreakMode
+         numberOfLines:(NSInteger)numberOfLines
+       backgroundColor:(UIColor *)backgroundColor
 {
   UILabel *label = [[self alloc] init];
   label.font            = font;
