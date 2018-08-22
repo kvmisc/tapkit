@@ -47,7 +47,6 @@
 		0A5F481919812E7200A1DA9A /* TKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCommon.m; sourceTree = "<group>"; };
 		0A5F481F19812E7200A1DA9A /* TKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCache.h; sourceTree = "<group>"; };
 		0A5F482019812E7200A1DA9A /* TKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCache.m; sourceTree = "<group>"; };
-		0A5F482319812E7200A1DA9A /* TKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMacro.h; sourceTree = "<group>"; };
 		0A5F483519812E7200A1DA9A /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		0A5F483619812E7200A1DA9A /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		0A5F483719812E7200A1DA9A /* UIViewControllerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerAdditions.h; sourceTree = "<group>"; };
@@ -123,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				0A5F481719812E7200A1DA9A /* tapkit.h */,
-				0A5F482319812E7200A1DA9A /* TKMacro.h */,
 				0A5F481819812E7200A1DA9A /* TKCommon.h */,
 				0A5F481919812E7200A1DA9A /* TKCommon.m */,
 				0A5F481F19812E7200A1DA9A /* TKCache.h */,

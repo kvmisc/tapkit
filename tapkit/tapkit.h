@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Tapmob. All rights reserved.
 //
 
-#import "TKMacro.h"
 #import "TKCommon.h"
 #import "TKCache.h"
 
