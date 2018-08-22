@@ -46,17 +46,6 @@ BOOL TKCreateDirectory(NSString *path);
 
 BOOL TKDeleteFileOrDirectory(NSString *path);
 
-
-///-------------------------------
-/// Weak collections
-///-------------------------------
-
-NSMutableArray *TKCreateWeakMutableArray(void);
-
-NSMutableDictionary *TKCreateWeakMutableDictionary(void);
-
-NSMutableSet *TKCreateWeakMutableSet(void);
-
 #ifdef __cplusplus
 }
 #endif

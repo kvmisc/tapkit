@@ -7,7 +7,6 @@
 //
 
 #import "TKCommon.h"
-#import "TKMacro.h"
 
 #pragma mark - System message
 
@@ -106,23 +105,4 @@ BOOL TKDeleteFileOrDirectory(NSString *path)
     return [[NSFileManager defaultManager] removeItemAtPath:path error:NULL];
   }
   return NO;
-}
-
-
-
-#pragma mark - Weak collections
-
-NSMutableArray *TKCreateWeakMutableArray(void)
-{
-  return (__bridge_transfer NSMutableArray *)CFArrayCreateMutable(nil, 0, nil);
-}
-
-NSMutableDictionary *TKCreateWeakMutableDictionary(void)
-{
-  return (__bridge_transfer NSMutableDictionary *)CFDictionaryCreateMutable(nil, 0, nil, nil);
-}
-
-NSMutableSet *TKCreateWeakMutableSet(void)
-{
-  return (__bridge_transfer NSMutableSet *)CFSetCreateMutable(nil, 0, nil);
 }

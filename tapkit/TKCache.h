@@ -45,7 +45,7 @@
 
 
 ///-------------------------------
-/// Misc
+/// Miscellaneous
 ///-------------------------------
 
 - (NSString *)pathForKey:(NSString *)key;

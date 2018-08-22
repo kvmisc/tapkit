@@ -184,7 +184,7 @@ static TKCache *Cache = nil;
 
 
 
-#pragma mark - Misc
+#pragma mark - Miscellaneous
 
 - (NSString *)pathForKey:(NSString *)key
 {
