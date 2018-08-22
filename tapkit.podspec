@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "tapkit"
-  s.version      = "2.0.8"
+  s.version      = "2.0.9"
   s.summary      = "An Objective-C library for iPhone developers."
   s.homepage     = "https://github.com/kvmisc/tapkit"
   s.license      = "MIT"

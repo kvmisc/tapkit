@@ -18,7 +18,6 @@
 		0A5F483E19812E7200A1DA9A /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481619812E7200A1DA9A /* NSStringAdditions.m */; };
 		0A5F483F19812E7200A1DA9A /* TKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481919812E7200A1DA9A /* TKCommon.m */; };
 		0A5F484219812E7200A1DA9A /* TKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F482019812E7200A1DA9A /* TKCache.m */; };
-		0A5F484819812E7200A1DA9A /* UIButtonAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F482E19812E7200A1DA9A /* UIButtonAdditions.m */; };
 		0A5F484919812E7200A1DA9A /* UILabelAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483019812E7200A1DA9A /* UILabelAdditions.m */; };
 		0A5F484C19812E7200A1DA9A /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483619812E7200A1DA9A /* UIViewAdditions.m */; };
 		0A5F484D19812E7200A1DA9A /* UIViewControllerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483819812E7200A1DA9A /* UIViewControllerAdditions.m */; };
@@ -50,8 +49,6 @@
 		0A5F481F19812E7200A1DA9A /* TKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCache.h; sourceTree = "<group>"; };
 		0A5F482019812E7200A1DA9A /* TKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCache.m; sourceTree = "<group>"; };
 		0A5F482319812E7200A1DA9A /* TKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMacro.h; sourceTree = "<group>"; };
-		0A5F482D19812E7200A1DA9A /* UIButtonAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonAdditions.h; sourceTree = "<group>"; };
-		0A5F482E19812E7200A1DA9A /* UIButtonAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonAdditions.m; sourceTree = "<group>"; };
 		0A5F482F19812E7200A1DA9A /* UILabelAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelAdditions.h; sourceTree = "<group>"; };
 		0A5F483019812E7200A1DA9A /* UILabelAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelAdditions.m; sourceTree = "<group>"; };
 		0A5F483519812E7200A1DA9A /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
@@ -144,8 +141,6 @@
 				0A5F481419812E7200A1DA9A /* NSObjectAdditions.m */,
 				0A5F481519812E7200A1DA9A /* NSStringAdditions.h */,
 				0A5F481619812E7200A1DA9A /* NSStringAdditions.m */,
-				0A5F482D19812E7200A1DA9A /* UIButtonAdditions.h */,
-				0A5F482E19812E7200A1DA9A /* UIButtonAdditions.m */,
 				0A5F482F19812E7200A1DA9A /* UILabelAdditions.h */,
 				0A5F483019812E7200A1DA9A /* UILabelAdditions.m */,
 				0A5F483519812E7200A1DA9A /* UIViewAdditions.h */,
@@ -191,11 +186,11 @@
 		0A29577C1933865900E29848 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Tapmob;
 				TargetAttributes = {
 					0A2957831933865900E29848 = {
-						DevelopmentTeam = GY929GT648;
+						DevelopmentTeam = 328H572F92;
 					};
 				};
 			};
@@ -242,7 +237,6 @@
 				0A3BDBB41CC9D3BF007F170E /* TKViewController.m in Sources */,
 				0A5F484C19812E7200A1DA9A /* UIViewAdditions.m in Sources */,
 				0A5F483F19812E7200A1DA9A /* TKCommon.m in Sources */,
-				0A5F484819812E7200A1DA9A /* UIButtonAdditions.m in Sources */,
 				2337F60F1981141500C0768E /* main.m in Sources */,
 				0A5F483D19812E7200A1DA9A /* NSObjectAdditions.m in Sources */,
 				0A5F483C19812E7200A1DA9A /* NSDictionaryAdditions.m in Sources */,
@@ -261,14 +255,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -305,14 +307,22 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -340,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = GY929GT648;
+				DEVELOPMENT_TEAM = 328H572F92;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TapKitDemo/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -361,7 +371,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				DEVELOPMENT_TEAM = GY929GT648;
+				DEVELOPMENT_TEAM = 328H572F92;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TapKitDemo/Prefix.pch;
 				HEADER_SEARCH_PATHS = (

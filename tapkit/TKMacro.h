@@ -28,8 +28,8 @@
 
 
 // compare
-#define TK_BOTH_NIL_OR_EQUAL(_a_,_b_)  (((!(_a_))&&(!(_b_)))||([_a_ isEqual:_b_]))
 #define TK_NOT_NIL_AND_EQUAL(_a_,_b_)  ((_a_)&&([_a_ isEqual:_b_]))
+#define TK_BOTH_NIL_OR_EQUAL(_a_,_b_)  (((!(_a_))&&(!(_b_)))||([_a_ isEqual:_b_]))
 #define TK_EQUAL(_a_,_b_)              ([_a_ isEqual:_b_])
 
 #define TK_FLT_EQUAL(_a_,_b_) (fabsf(_a_-_b_)<FLT_EPSILON)

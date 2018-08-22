@@ -51,11 +51,11 @@ BOOL TKDeleteFileOrDirectory(NSString *path);
 /// Weak collections
 ///-------------------------------
 
-NSMutableArray *TKCreateWeakMutableArray();
+NSMutableArray *TKCreateWeakMutableArray(void);
 
-NSMutableDictionary *TKCreateWeakMutableDictionary();
+NSMutableDictionary *TKCreateWeakMutableDictionary(void);
 
-NSMutableSet *TKCreateWeakMutableSet();
+NSMutableSet *TKCreateWeakMutableSet(void);
 
 #ifdef __cplusplus
 }

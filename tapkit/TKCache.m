@@ -26,7 +26,7 @@
 {
   self = [super init];
   if (self) {
-    [self initialize];
+    [self setup];
   }
   return self;
 }
@@ -36,12 +36,12 @@
   self = [super init];
   if ( self ) {
     _path = [path copy];
-    [self initialize];
+    [self setup];
   }
   return self;
 }
 
-- (void)initialize
+- (void)setup
 {
   _itemAry = [[NSMutableArray alloc] init];
   _lock = [[NSLock alloc] init];
