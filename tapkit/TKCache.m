@@ -7,7 +7,6 @@
 //
 
 #import "TKCache.h"
-#import "TKMacro.h"
 #import "TKCommon.h"
 
 #define CACHE_SETTING @"ad68bddb-7e05-40e3-afb5-d79806d831d0"
@@ -26,7 +25,7 @@
 {
   self = [super init];
   if (self) {
-    [self setup];
+    [self setup_];
   }
   return self;
 }
@@ -36,17 +35,17 @@
   self = [super init];
   if ( self ) {
     _path = [path copy];
-    [self setup];
+    [self setup_];
   }
   return self;
 }
 
-- (void)setup
+- (void)setup_
 {
   _itemAry = [[NSMutableArray alloc] init];
   _lock = [[NSLock alloc] init];
 
-  if ( TK_S_NONEMPTY(_path) ) {
+  if ( _path.length>0 ) {
     TKCreateDirectory(_path);
 
     NSString *path = [self pathForKey:CACHE_SETTING];
@@ -82,11 +81,11 @@ static TKCache *Cache = nil;
 - (id)objectForKey:(NSString *)key
 {
   id object = nil;
-  if ( TK_S_NONEMPTY(key) ) {
+  if ( key.length>0 ) {
     [_lock lock];
-    TKCacheItem *item = [self itemByKey:key];
+    TKCacheItem *item = [self item_ByKey:key];
     if ( (item) && (![item expired]) ) {
-      if ( TK_S_NONEMPTY(_path) ) {
+      if ( _path.length>0 ) {
         object = [[NSData alloc] initWithContentsOfFile:[self pathForKey:item.key]];
       } else {
         object = item.object;
@@ -94,16 +93,16 @@ static TKCache *Cache = nil;
     }
     [_lock unlock];
   }
-  [self delayCleanUp];
+  [self delay_CleanUp];
   return object;
 }
 
 - (void)setObject:(id)object forKey:(NSString *)key withTimeout:(NSTimeInterval)timeout
 {
-  if ( TK_S_NONEMPTY(key) && (timeout>0.0) ) {
+  if ( (key.length>0) && (timeout>0.0) ) {
     [_lock lock];
 
-    TKCacheItem *item = [self itemByKey:key];
+    TKCacheItem *item = [self item_ByKey:key];
     if ( !item ) {
       item = [[TKCacheItem alloc] init];
       [_itemAry addObject:item];
@@ -111,7 +110,7 @@ static TKCache *Cache = nil;
 
     item.key = key;
     item.expiry = [[NSDate alloc] initWithTimeIntervalSinceNow:timeout];
-    if ( TK_S_NONEMPTY(_path) ) {
+    if ( _path.length>0 ) {
       item.size = [object length];
       NSString *path = [self pathForKey:key];
       if ( object ) {
@@ -127,16 +126,16 @@ static TKCache *Cache = nil;
 
     [_lock unlock];
   }
-  [self delayCleanUp];
+  [self delay_CleanUp];
 }
 
 - (void)removeCacheForKey:(NSString *)key
 {
-  if ( TK_S_NONEMPTY(key) ) {
+  if ( key.length>0 ) {
     [_lock lock];
     for ( NSUInteger i=0; i<[_itemAry count]; ++i ) {
       TKCacheItem *item = [_itemAry objectAtIndex:i];
-      if ( TK_EQUAL(key, item.key) ) {
+      if ( [key isEqual:item.key] ) {
         TKDeleteFileOrDirectory([self pathForKey:item.key]);
         [_itemAry removeObjectAtIndex:i];
         break;
@@ -145,20 +144,20 @@ static TKCache *Cache = nil;
     TKSaveArchivableObject(_itemAry, [self pathForKey:CACHE_SETTING]);
     [_lock unlock];
   }
-  [self delayCleanUp];
+  [self delay_CleanUp];
 }
 
 
 - (BOOL)hasCacheForKey:(NSString *)key
 {
   BOOL result = NO;
-  if ( TK_S_NONEMPTY(key) ) {
+  if ( key.length>0 ) {
     [_lock lock];
-    TKCacheItem *item = [self itemByKey:key];
+    TKCacheItem *item = [self item_ByKey:key];
     result = ( (item) && (![item expired]) );
     [_lock unlock];
   }
-  [self delayCleanUp];
+  [self delay_CleanUp];
   return result;
 }
 
@@ -169,7 +168,7 @@ static TKCache *Cache = nil;
 - (void)clearAll
 {
   [_lock lock];
-  if ( TK_S_NONEMPTY(_path) ) {
+  if ( _path.length>0 ) {
     TKDeleteFileOrDirectory(_path);
     TKCreateDirectory(_path);
   }
@@ -180,7 +179,7 @@ static TKCache *Cache = nil;
 
 - (void)cleanUp
 {
-  [self doCleanUp:nil];
+  [self do_CleanUp:nil];
 }
 
 
@@ -194,30 +193,30 @@ static TKCache *Cache = nil;
 
 - (void)prepareForDeallocate
 {
-  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(doCleanUp:) object:nil];
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(do_CleanUp:) object:nil];
 }
 
 
 
 #pragma mark - Private methods
 
-- (TKCacheItem *)itemByKey:(NSString *)key
+- (TKCacheItem *)item_ByKey:(NSString *)key
 {
   for ( TKCacheItem *item in _itemAry ) {
-    if ( TK_EQUAL(key, item.key) ) {
+    if ( [key isEqual:item.key] ) {
       return item;
     }
   }
   return nil;
 }
 
-- (void)delayCleanUp
+- (void)delay_CleanUp
 {
-  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(doCleanUp:) object:nil];
-  [self performSelector:@selector(doCleanUp:) withObject:nil afterDelay:1.0];
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(do_CleanUp:) object:nil];
+  [self performSelector:@selector(do_CleanUp:) withObject:nil afterDelay:1.0];
 }
 
-- (void)doCleanUp:(id)object
+- (void)do_CleanUp:(id)object
 {
   [_lock lock];
   for ( NSUInteger i=0; i<[_itemAry count]; /**/ ) {

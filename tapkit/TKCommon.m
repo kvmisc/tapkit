@@ -30,7 +30,7 @@ void TKPresentSystemMessage(NSString *message)
 
 BOOL TKSaveArchivableObject(id object, NSString *path)
 {
-  if ( TK_S_NONEMPTY(path) ) {
+  if ( path.length>0 ) {
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
     [data writeToFile:path atomically:YES];
   }
@@ -39,7 +39,7 @@ BOOL TKSaveArchivableObject(id object, NSString *path)
 
 id TKLoadArchivableObject(NSString *path)
 {
-  if ( TK_S_NONEMPTY(path) ) {
+  if ( path.length>0 ) {
     return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
   }
   return nil;
@@ -87,7 +87,7 @@ NSString *TKPathForCachesResource(NSString *relativePath)
 
 BOOL TKCreateDirectory(NSString *path)
 {
-  if ( TK_S_NONEMPTY(path) ) {
+  if ( path.length>0 ) {
     BOOL isDirectory = NO;
     if ( ![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectory] ) {
       return [[NSFileManager defaultManager] createDirectoryAtPath:path
@@ -102,7 +102,7 @@ BOOL TKCreateDirectory(NSString *path)
 
 BOOL TKDeleteFileOrDirectory(NSString *path)
 {
-  if ( TK_S_NONEMPTY(path) ) {
+  if ( path.length>0 ) {
     return [[NSFileManager defaultManager] removeItemAtPath:path error:NULL];
   }
   return NO;
