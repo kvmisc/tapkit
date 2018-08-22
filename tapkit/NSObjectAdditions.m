@@ -7,7 +7,6 @@
 //
 
 #import "NSObjectAdditions.h"
-#import "TKMacro.h"
 
 @implementation NSObject (TapKit)
 
@@ -15,7 +14,7 @@
 
 - (BOOL)tk_isValueForKeyPath:(NSString *)keyPath equalTo:(id)value
 {
-  if ( TK_S_NONEMPTY(keyPath) ) {
+  if ( keyPath.length>0 ) {
     id aValue = [self valueForKeyPath:keyPath];
 
     if ( (!aValue) && (!value) ) {
@@ -29,7 +28,7 @@
 
 - (BOOL)tk_isValueForKeyPath:(NSString *)keyPath identicalTo:(id)value
 {
-  if ( TK_S_NONEMPTY(keyPath) ) {
+  if ( keyPath.length>0 ) {
     return ( [self valueForKeyPath:keyPath]==value );
   }
   return NO;

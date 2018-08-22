@@ -57,7 +57,7 @@ NSString *TKPathForBundleResource(NSBundle *bundle, NSString *relativePath)
 NSString *TKPathForDocumentResource(NSString *relativePath)
 {
   static NSString *DocumentPath = nil;
-  if ( TK_S_EMPTY(DocumentPath) ) {
+  if ( DocumentPath.length<=0 ) {
     NSArray *pathAry = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     DocumentPath = [pathAry objectAtIndex:0];
   }
@@ -67,7 +67,7 @@ NSString *TKPathForDocumentResource(NSString *relativePath)
 NSString *TKPathForLibraryResource(NSString *relativePath)
 {
   static NSString *LibraryPath = nil;
-  if ( TK_S_EMPTY(LibraryPath) ) {
+  if ( LibraryPath.length<=0 ) {
     NSArray *pathAry = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     LibraryPath = [pathAry objectAtIndex:0];
   }
@@ -77,7 +77,7 @@ NSString *TKPathForLibraryResource(NSString *relativePath)
 NSString *TKPathForCachesResource(NSString *relativePath)
 {
   static NSString *CachesPath = nil;
-  if ( TK_S_EMPTY(CachesPath) ) {
+  if ( CachesPath.length<=0 ) {
     NSArray *pathAry = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     CachesPath = [pathAry objectAtIndex:0];
   }

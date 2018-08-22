@@ -9,15 +9,9 @@
 
 // xx nonempty
 #define TK_S_NONEMPTY(_a_)  ([_a_ length]>0)
-#define TK_D_NONEMPTY(_a_)  ([_a_ length]>0)
-#define TK_A_NONEMPTY(_a_)  ([_a_ count]>0)
-#define TK_M_NONEMPTY(_a_)  ([_a_ count]>0)
 
 // xx empty
 #define TK_S_EMPTY(_a_)  ([_a_ length]<=0)
-#define TK_D_EMPTY(_a_)  ([_a_ length]<=0)
-#define TK_A_EMPTY(_a_)  ([_a_ count]<=0)
-#define TK_M_EMPTY(_a_)  ([_a_ count]<=0)
 
 
 // xx or later

@@ -7,9 +7,8 @@
 //
 
 #import "UIViewAdditions.h"
-#import "TKMacro.h"
 
-UIView *TKFindFirstResponderInView(UIView *topView)
+UIView *TK_FindFirstResponderInView(UIView *topView)
 {
   if ( [topView isFirstResponder] ) {
     return topView;
@@ -18,7 +17,7 @@ UIView *TKFindFirstResponderInView(UIView *topView)
     if ( [subview isFirstResponder] ) {
       return subview;
     }
-    UIView *responder = TKFindFirstResponderInView(subview);
+    UIView *responder = TK_FindFirstResponderInView(subview);
     if ( responder ) {
       return responder;
     }
@@ -37,7 +36,7 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 + (id)tk_loadFromNibNamed:(NSString *)name
 {
-  if ( TK_S_NONEMPTY(name) ) {
+  if ( name.length>0 ) {
     return [[[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil] lastObject];
   }
   return nil;
@@ -87,7 +86,7 @@ UIView *TKFindFirstResponderInView(UIView *topView)
 
 - (UIView *)tk_findFirstResponder
 {
-  return TKFindFirstResponderInView(self);
+  return TK_FindFirstResponderInView(self);
 }
 
 

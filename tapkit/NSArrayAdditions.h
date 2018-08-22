@@ -66,9 +66,6 @@
 - (id)tk_insertObject:(id)object atIndexIfNotNil:(NSUInteger)idx;
 
 
-- (void)tk_removeFirstObject;
-
-
 ///-------------------------------
 /// Ordering
 ///-------------------------------

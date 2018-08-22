@@ -11,24 +11,6 @@
 @interface NSString (TapKit)
 
 ///-------------------------------
-/// Validity
-///-------------------------------
-
-- (BOOL)tk_isInCharacterSet:(NSCharacterSet *)characterSet;
-
-- (BOOL)tk_hasInCharacterSet:(NSCharacterSet *)characterSet;
-
-
-///-------------------------------
-/// Finding
-///-------------------------------
-
-- (NSUInteger)tk_locationOfString:(NSString *)string;
-
-- (BOOL)tk_containsString:(NSString *)string;
-
-
-///-------------------------------
 /// Hash
 ///-------------------------------
 

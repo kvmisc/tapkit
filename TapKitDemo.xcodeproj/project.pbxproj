@@ -18,7 +18,6 @@
 		0A5F483E19812E7200A1DA9A /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481619812E7200A1DA9A /* NSStringAdditions.m */; };
 		0A5F483F19812E7200A1DA9A /* TKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F481919812E7200A1DA9A /* TKCommon.m */; };
 		0A5F484219812E7200A1DA9A /* TKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F482019812E7200A1DA9A /* TKCache.m */; };
-		0A5F484919812E7200A1DA9A /* UILabelAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483019812E7200A1DA9A /* UILabelAdditions.m */; };
 		0A5F484C19812E7200A1DA9A /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483619812E7200A1DA9A /* UIViewAdditions.m */; };
 		0A5F484D19812E7200A1DA9A /* UIViewControllerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F483819812E7200A1DA9A /* UIViewControllerAdditions.m */; };
 		2337F60C1981141500C0768E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2337F6051981141500C0768E /* AppDelegate.m */; };
@@ -49,8 +48,6 @@
 		0A5F481F19812E7200A1DA9A /* TKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCache.h; sourceTree = "<group>"; };
 		0A5F482019812E7200A1DA9A /* TKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCache.m; sourceTree = "<group>"; };
 		0A5F482319812E7200A1DA9A /* TKMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMacro.h; sourceTree = "<group>"; };
-		0A5F482F19812E7200A1DA9A /* UILabelAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelAdditions.h; sourceTree = "<group>"; };
-		0A5F483019812E7200A1DA9A /* UILabelAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelAdditions.m; sourceTree = "<group>"; };
 		0A5F483519812E7200A1DA9A /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		0A5F483619812E7200A1DA9A /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		0A5F483719812E7200A1DA9A /* UIViewControllerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerAdditions.h; sourceTree = "<group>"; };
@@ -131,18 +128,16 @@
 				0A5F481919812E7200A1DA9A /* TKCommon.m */,
 				0A5F481F19812E7200A1DA9A /* TKCache.h */,
 				0A5F482019812E7200A1DA9A /* TKCache.m */,
-				0A5F480B19812E7200A1DA9A /* NSArrayAdditions.h */,
-				0A5F480C19812E7200A1DA9A /* NSArrayAdditions.m */,
-				0A5F480D19812E7200A1DA9A /* NSDataAdditions.h */,
-				0A5F480E19812E7200A1DA9A /* NSDataAdditions.m */,
-				0A5F481119812E7200A1DA9A /* NSDictionaryAdditions.h */,
-				0A5F481219812E7200A1DA9A /* NSDictionaryAdditions.m */,
 				0A5F481319812E7200A1DA9A /* NSObjectAdditions.h */,
 				0A5F481419812E7200A1DA9A /* NSObjectAdditions.m */,
 				0A5F481519812E7200A1DA9A /* NSStringAdditions.h */,
 				0A5F481619812E7200A1DA9A /* NSStringAdditions.m */,
-				0A5F482F19812E7200A1DA9A /* UILabelAdditions.h */,
-				0A5F483019812E7200A1DA9A /* UILabelAdditions.m */,
+				0A5F480D19812E7200A1DA9A /* NSDataAdditions.h */,
+				0A5F480E19812E7200A1DA9A /* NSDataAdditions.m */,
+				0A5F480B19812E7200A1DA9A /* NSArrayAdditions.h */,
+				0A5F480C19812E7200A1DA9A /* NSArrayAdditions.m */,
+				0A5F481119812E7200A1DA9A /* NSDictionaryAdditions.h */,
+				0A5F481219812E7200A1DA9A /* NSDictionaryAdditions.m */,
 				0A5F483519812E7200A1DA9A /* UIViewAdditions.h */,
 				0A5F483619812E7200A1DA9A /* UIViewAdditions.m */,
 				0A5F483719812E7200A1DA9A /* UIViewControllerAdditions.h */,
@@ -231,7 +226,6 @@
 				0A5F483919812E7200A1DA9A /* NSArrayAdditions.m in Sources */,
 				0A5F484D19812E7200A1DA9A /* UIViewControllerAdditions.m in Sources */,
 				0A5F483A19812E7200A1DA9A /* NSDataAdditions.m in Sources */,
-				0A5F484919812E7200A1DA9A /* UILabelAdditions.m in Sources */,
 				0A5F483E19812E7200A1DA9A /* NSStringAdditions.m in Sources */,
 				0A5F484219812E7200A1DA9A /* TKCache.m in Sources */,
 				0A3BDBB41CC9D3BF007F170E /* TKViewController.m in Sources */,

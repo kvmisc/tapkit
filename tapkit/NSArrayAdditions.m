@@ -201,14 +201,6 @@
 }
 
 
-- (void)tk_removeFirstObject
-{
-  if ( [self count]>0 ) {
-    [self removeObjectAtIndex:0];
-  }
-}
-
-
 
 #pragma mark - Ordering
 
@@ -280,7 +272,9 @@
 - (id)tk_dequeue
 {
   id object = [self firstObject];
-  [self tk_removeFirstObject];
+  if ( [self count]>0 ) {
+    [self removeObjectAtIndex:0];
+  }
   return object;
 }
 
